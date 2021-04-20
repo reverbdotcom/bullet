@@ -30,7 +30,8 @@ module Bullet
           elsif active_record61?
             'active_record61'
           else
-            raise "Bullet does not support active_record #{::ActiveRecord::VERSION::STRING} yet"
+            # REVERB FORK, don't raise, just warn for now
+            puts "Bullet does not support active_record #{::ActiveRecord::VERSION::STRING} yet"
           end
         end
     end
